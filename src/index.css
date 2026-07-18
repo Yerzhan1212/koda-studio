@@ -1,0 +1,70 @@
+@import url('https://fonts.googleapis.com/css2?family=Unbounded:wght@500;600;700;800&family=Manrope:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root{
+  --ink-900:#0F172A;
+  --ink-700:#334155;
+  --ink-500:#64748B;
+  --ink-300:#94A3B8;
+  --line:#E2E8F0;
+  --bg:#F8FAFC;
+  --card:#FFFFFF;
+  --teal-400:#06B6D4;
+  --teal-600:#0E7490;
+  --teal-tint:#E0F7FA;
+  --ease-out:cubic-bezier(.16,1,.3,1);
+}
+
+html{ scroll-behavior:smooth; }
+body{
+  background:var(--bg);
+  color:var(--ink-900);
+  font-family:'Manrope', sans-serif;
+}
+::selection{ background:var(--teal-400); color:#fff; }
+
+@media (prefers-reduced-motion: reduce){
+  *{ animation:none !important; transition:none !important; }
+}
+
+/* ---- corner-bracket frame motif ---- */
+.frame-corner{
+  position:absolute; width:14px; height:14px;
+  border:1.5px solid var(--teal-400); opacity:.9;
+  transition:width .2s var(--ease-out), height .2s var(--ease-out);
+  pointer-events:none;
+}
+.group:hover .frame-corner{ width:20px; height:20px; }
+
+/* ---- tag pulse dot ---- */
+.tag-dot{ width:5px; height:5px; border-radius:50%; display:inline-block; animation:pulseDot 2.2s var(--ease-out) infinite; }
+@keyframes pulseDot{ 0%,100%{opacity:1;transform:scale(1);} 50%{opacity:.5;transform:scale(1.4);} }
+
+/* ---- terminal cursor ---- */
+.term-cursor{ display:inline-block; width:7px; height:15px; vertical-align:middle; animation:blink 1s step-end infinite; }
+@keyframes blink{ 50%{opacity:0;} }
+
+/* ---- hero headline line-reveal ---- */
+.hero-line{ display:block; overflow:hidden; }
+.hero-line span{ display:block; transform:translateY(110%); animation:lineUp .9s var(--ease-out) forwards; }
+@keyframes lineUp{ to{ transform:translateY(0); } }
+
+/* ---- faint blueprint grid behind the hero ---- */
+.blueprint-grid{
+  background-image:
+    linear-gradient(rgba(6,182,212,0.07) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(6,182,212,0.07) 1px, transparent 1px);
+  background-size:42px 42px;
+}
+
+/* ---- scroll ruler ---- */
+.ruler{ position:fixed; left:40px; top:0; height:100vh; width:70px; z-index:60; pointer-events:none; }
+.ruler-track{ position:absolute; left:0; width:1px; }
+.ruler-progress{ position:absolute; left:0; width:1px; transition:height .1s linear; }
+.ruler-tick{ position:absolute; left:-3px; width:7px; height:1px; }
+.ruler-tick-label{ position:absolute; left:12px; transform:translateY(-50%); font-size:10px; font-family:'JetBrains Mono',monospace; white-space:nowrap; }
+.ruler-dot{ position:absolute; left:-3.5px; width:8px; height:8px; border-radius:50%; box-shadow:0 0 10px rgba(6,182,212,.5); transition:top .1s linear; }
+.ruler-dot-label{ position:absolute; left:14px; transform:translateY(-50%); font-size:11px; font-weight:600; font-family:'JetBrains Mono',monospace; white-space:nowrap; transition:top .1s linear; }
