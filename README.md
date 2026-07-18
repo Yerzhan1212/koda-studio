@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # KODA — сайт-визитка веб-студии
 
 Одностраничный лендинг на React + Vite + Tailwind CSS.
@@ -48,3 +49,6 @@ src/
 - Имя со-основателя и контакты в `src/components/Contact.jsx`
 - Ссылки на Telegram и почту (сейчас `href="#"`)
 - При желании — добавить свой домен и favicon в `public/`
+=======
+# koda-studio
+>>>>>>> 8a25be595089f8a6ecf680ad8192eaa948217012
