@@ -4,7 +4,7 @@ import { T } from "../theme";
 const TERMINAL_LINES = [
   { p: "$ ", t: 'koda deploy --client="ваш бизнес"', cls: "" },
   { p: "", t: "✓ frontend build — react · 4.2s", cls: "ok" },
-  { p: "", t: "✓ backend build — go · 1.8s", cls: "ok" },
+  { p: "", t: "✓ backend build — python · 1.8s", cls: "ok" },
   { p: "", t: "✓ database migrated — postgresql", cls: "ok" },
   { p: "$ ", t: "koda status", cls: "" },
   { p: "", t: "● live — koda.studio/ваш-сайт", cls: "ok" },
