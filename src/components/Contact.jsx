@@ -28,15 +28,20 @@ export default function Contact() {
         </Reveal>
         <Reveal delay={200}>
           <div className="flex flex-wrap justify-center gap-3.5">
-            <Btn href="#" variant="primary">
+            <Btn 
+              href="https://t.me/sq1der" 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              variant="primary"
+            >
               <Send size={16} /> Написать в Telegram
             </Btn>
             <a
-              href="#"
+              href="mailto:amanbelgibay@gmail.com"
               className="inline-flex items-center gap-2 rounded-md px-5 py-3 text-[14.5px] font-bold border transition-colors"
               style={{ borderColor: "#334155", color: "#fff" }}
             >
-              <Mail size={16} /> hello@koda.studio
+              <Mail size={16} /> amanbelgibay@gmail.com
             </a>
           </div>
         </Reveal>
