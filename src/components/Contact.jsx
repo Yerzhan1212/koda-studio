@@ -37,7 +37,7 @@ export default function Contact() {
               <Send size={16} /> Написать в Telegram
             </Btn>
             <a
-              href="mailto:kodastudio.it@gmail.com"
+              href="https://mail.google.com/mail/u/1/#inbox"
               role="button"
               className="inline-flex items-center gap-2 rounded-md px-5 py-3 text-[14.5px] font-bold border transition-all hover:-translate-y-0.5 active:translate-y-0 select-none"
               style={{ borderColor: "#334155", color: "#fff" }}
