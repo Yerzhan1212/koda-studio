@@ -1,7 +1,6 @@
 import { T } from "../../theme";
 
-// Фирменные уголки-скобки ("инженерный чертёж"). Оборачивай карточку/панель
-// в <Frame>, чтобы получить их; при наведении уголки чуть увеличиваются.
+
 export default function Frame({ children, className = "", style = {}, ...rest }) {
   return (
     <div

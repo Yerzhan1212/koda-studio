@@ -37,11 +37,11 @@ export default function Contact() {
               <Send size={16} /> Написать в Telegram
             </Btn>
             <a
-              href="mailto:amanbelgibay@gmail.com"
+              href="mailto:kodastudio.it@gmail.com"
               className="inline-flex items-center gap-2 rounded-md px-5 py-3 text-[14.5px] font-bold border transition-colors"
               style={{ borderColor: "#334155", color: "#fff" }}
             >
-              <Mail size={16} /> amanbelgibay@gmail.com
+              <Mail size={16} /> kodastudio.it@gmail.com
             </a>
           </div>
         </Reveal>
